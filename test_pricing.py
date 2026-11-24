@@ -10,3 +10,6 @@ def test_discount():
 def test_invalid_discount():
     with pytest.raises(ValueError):
         calculate_price(100, 120)
+
+def test_rounding():
+    assert calculate_price(99.99, 15) == 84.99
